@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Query Selector Example</title>
+    <style>
+        .highlight {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM Query Selector Example</h1>
+
+    <p class="highlight" id="firstParagraph">This paragraph has the class "highlight" and the ID "firstParagraph".</p>
+
+    <p>This paragraph does not have any special class or ID.</p>
+
+    <p class="highlight">This paragraph also has the class "highlight".</p>
+
+    <script>
+        function changeTextColor() {
+            var paragraphs = document.querySelectorAll(".highlight");
+
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = "red";
+            }
+        }
+
+        // Call the function to change the text color of paragraphs with class "highlight"
+        changeTextColor();
+    </script>
+</body>
+
+</html>

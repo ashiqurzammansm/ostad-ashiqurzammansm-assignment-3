@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Part A: Function to check if a positive integer is a prime number
+        function isPrimeNumber(num) {
+            if (num <= 1) {
+                return false;
+            }
+
+            // Check for divisibility from 2 to the square root of the number
+            for (var i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // Example usage
+        var inputNumber = 17;
+        var isPrime = isPrimeNumber(inputNumber);
+        console.log(isPrime); // Output: true
+
+        // Part B: Function to display if a given positive integer is a prime number
+        function displayPrimeCheckResult(num) {
+            var isPrime = isPrimeNumber(num);
+            console.log(num + " is prime:", isPrime);
+        }
+
+        // Example usage
+        var inputNumber = 17;
+        displayPrimeCheckResult(inputNumber);
+        // Output: 17 is prime: true
+    </script>
+</body>
+
+</html>

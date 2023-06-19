@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Change Attribute Value Example</title>
+</head>
+
+<body>
+    <h1>DOM Change Attribute Value Example</h1>
+
+    <img id="myImage" src="initial-image.jpg" alt="Initial Image">
+
+    <button id="changeButton">Change Image</button>
+
+    <script>
+        var button = document.getElementById("changeButton");
+        var image = document.getElementById("myImage");
+
+        button.addEventListener("click", function() {
+            image.src = "new-image.jpg";
+            image.alt = "New Image";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Common Events Example</title>
+</head>
+
+<body>
+    <h1>Common Events Example</h1>
+
+    <p>Click anywhere on the page to display the coordinates (x, y) of the click.</p>
+
+    <p>Press any key on the keyboard to display the key code of the pressed key.</p>
+
+    <img id="image" src="original-image.jpg" alt="Image" width="200" height="200">
+
+    <script>
+        // Part A: Display coordinates on click
+        document.addEventListener("click", function(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            alert("Clicked at coordinates (x, y): " + x + ", " + y);
+        });
+
+        // Part B: Display key code on key press
+        document.addEventListener("keydown", function(event) {
+            var keyCode = event.keyCode;
+            alert("Key pressed. Key code: " + keyCode);
+        });
+
+        // Part C: Change image source on mouseover
+        var imageElement = document.getElementById("image");
+        imageElement.addEventListener("mouseover", function(event) {
+            imageElement.src = "new-image.jpg";
+        });
+
+        imageElement.addEventListener("mouseout", function(event) {
+            imageElement.src = "original-image.jpg";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Part A: Function to open a new window with a specified URL and dimensions
+        function openNewWindow(url, width, height) {
+            var features = "width=" + width + ",height=" + height;
+            window.open(url, "_blank", features);
+        }
+
+        // Part B: Function to open a new window with the URL "https://www.example.com" and dimensions 800x600
+        function openExampleWindow() {
+            var url = "https://www.example.com";
+            var width = 800;
+            var height = 600;
+            openNewWindow(url, width, height);
+        }
+
+        // Example usage
+        openExampleWindow();
+    </script>
+</body>
+
+</html>

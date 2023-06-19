@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Part A: Function to get the day of the week for a given date
+        function getDayOfWeek(dateString) {
+            var dateParts = dateString.split("-");
+            var year = parseInt(dateParts[0]);
+            var month = parseInt(dateParts[1]) - 1; // Months are zero-based
+            var day = parseInt(dateParts[2]);
+
+            var date = new Date(year, month, day);
+            var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            return daysOfWeek[date.getDay()];
+        }
+
+        // Example usage
+        var inputDate = "2023-06-19";
+        var dayOfWeek = getDayOfWeek(inputDate);
+        console.log(dayOfWeek); // Output: Monday
+
+        // Part B: Function to display the day of the week for the current date
+        function getCurrentDayOfWeek() {
+            var currentDate = new Date();
+            var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            return daysOfWeek[currentDate.getDay()];
+        }
+
+        // Example usage
+        var currentDayOfWeek = getCurrentDayOfWeek();
+        console.log(currentDayOfWeek); // Output: The current day of the week
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Part A: Function to calculate the square root of the sum of squares
+        function calculateSquareRootOfSumOfSquares(numbers) {
+            var sumOfSquares = 0;
+
+            for (var i = 0; i < numbers.length; i++) {
+                sumOfSquares += Math.pow(numbers[i], 2);
+            }
+
+            return Math.sqrt(sumOfSquares);
+        }
+
+        // Example usage
+        var inputNumbers = [3, 4, 5];
+        var squareRoot = calculateSquareRootOfSumOfSquares(inputNumbers);
+        console.log(squareRoot); // Output: 7.0710678118654755
+
+        // Part B: Function to display the square root of the sum of squares for an array of numbers
+        function displaySquareRootOfSumOfSquares(numbers) {
+            var result = calculateSquareRootOfSumOfSquares(numbers);
+            console.log("Square root of sum of squares:", result);
+        }
+
+        // Example usage
+        var inputNumbers = [3, 4, 5];
+        displaySquareRootOfSumOfSquares(inputNumbers);
+        // Output: Square root of sum of squares: 7.0710678118654755
+    </script>
+</body>
+
+</html>
